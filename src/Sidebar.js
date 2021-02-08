@@ -3,7 +3,7 @@ import React from "react";
 import "./Sidebar.css";
 import { useSelector } from "react-redux";
 import { selectUser } from "./features/userSlice";
-import Edevelopmark from "./assets/edevelopmark.png"
+
 
 
 
@@ -19,7 +19,7 @@ function Sidebar() {
 
   const page = ( pageName , pageNotification ) => (
     <div className="sidebar__page">
-        <img src={Edevelopmark} />
+        <img src="https://edevelopmark.com/wp-content/uploads/2019/06/cropped-Edevelopmark-logo-1-1-227x42.png" />
         <div className="sidebar__pageProfile">
         <h3>{pageName}</h3>
         <p>{pageNotification}</p>
