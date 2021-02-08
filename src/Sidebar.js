@@ -17,9 +17,9 @@ function Sidebar() {
     </div>
   );
 
-  const page = ( pageName , pageNotification, logo ) => (
+  const page = ( pageName , pageNotification ) => (
     <div className="sidebar__page">
-        <img src={logo} />
+        <img src={Edevelopmark} />
         <div className="sidebar__pageProfile">
         <h3>{pageName}</h3>
         <p>{pageNotification}</p>
@@ -57,7 +57,7 @@ function Sidebar() {
 
       <div className="sidebar__upbottom">
         <p>My page</p>
-        {page("Edevelopmark", "Page notifications", "./assets/edevelopmark.png")}
+        {page("Edevelopmark", "Page notifications")}
       </div>
 
 
