@@ -4,9 +4,6 @@ import "./Sidebar.css";
 import { useSelector } from "react-redux";
 import { selectUser } from "./features/userSlice";
 
-
-
-
 function Sidebar() {
   const user = useSelector(selectUser);
 
@@ -17,15 +14,15 @@ function Sidebar() {
     </div>
   );
 
-  const page = ( pageName , pageNotification ) => (
+  const page = (pageName, pageNotification) => (
     <div className="sidebar__page">
-        <img src="https://edevelopmark.com/wp-content/uploads/2019/06/cropped-Edevelopmark-logo-1-1-227x42.png" />
-        <div className="sidebar__pageProfile">
+      <img src="https://edevelopmark.com/wp-content/uploads/2019/06/cropped-Edevelopmark-logo-1-1-227x42.png" />
+      <div className="sidebar__pageProfile">
         <h3>{pageName}</h3>
         <p>{pageNotification}</p>
-        </div>
       </div>
-  )
+    </div>
+  );
 
   return (
     <div className="sidebar">
@@ -59,7 +56,6 @@ function Sidebar() {
         <p>My page</p>
         {page("Edevelopmark", "Page notifications")}
       </div>
-
 
       <div className="sidebar__bottom">
         <p>Recent</p>
