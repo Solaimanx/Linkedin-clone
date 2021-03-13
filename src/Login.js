@@ -87,13 +87,15 @@ function Login() {
         />
 
         <button onClick={loginToApp}>Sign In</button>
-      </form>
-      <p>
+        <p>
         Not a member ?{"  "}
-        <span className="Login__register" onClick={register}>
-          Register Now
-        </span>
+        
       </p>
+
+      <button onClick={register} >Register Now</button>
+        
+      </form>
+      
     </div>
   );
 }

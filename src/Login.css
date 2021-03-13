@@ -35,14 +35,11 @@
   color: white;
   background-color: #0074b1;
   border-radius: 5px;
-  cursor:pointer;
-}
-
-.Login__register {
-  color: #0074b1;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
-.login > p {
-  margin-top: 20px;
+.login > form > p {
+  margin-bottom: 20px;
+  text-align: center;
 }
