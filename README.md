@@ -8,4 +8,4 @@ This is a Linkdin Clone with news feed , account feature.
 
 # Stack ? 
 
-React
+React  + Redux toolkits
