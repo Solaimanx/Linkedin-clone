@@ -16,6 +16,7 @@ function Login() {
   // This event will happen after clicking on "signIn" button ( because we are using onClick)
   const loginToApp = (e) => {
     e.preventDefault();
+
     auth.signInWithEmailAndPassword(email, password)
     .then((userAuth) => {
       dispatch(
@@ -28,7 +29,14 @@ function Login() {
       );
       
     }).catch(error => alert(error));
+
+
   };
+
+  
+
+
+
   //
   const register = () => {
     if (!name) {
@@ -55,7 +63,36 @@ function Login() {
           });
       })
       .catch((error) => alert(error));
+
+
+
+     
+
+
   };
+
+  const loginGuestAccount = (e) =>{
+
+    e.preventDefault();
+
+const email = 'solaiman321@gmail.com'
+const password = 'solaiman'
+
+    auth.signInWithEmailAndPassword(email, password)
+    .then((userAuth) => {
+      dispatch(
+        login({
+          email: userAuth.user.email,
+          uid: userAuth.user.uid,
+          displayName: userAuth.user.displayName,
+          profileUrl: userAuth.user.photoURL,
+        })
+      );
+      
+    }).catch(error => alert(error));
+
+
+  }
 
   return (
     <div className="login">
@@ -93,6 +130,7 @@ function Login() {
       </p>
 
       <button onClick={register} >Register Now</button>
+      <button onClick={loginGuestAccount} >Login As Guest</button>
         
       </form>
       
